@@ -1,0 +1,20 @@
+MISIÓN SI - GRADO NOVENO
+
+CONTENIDO:
+- index.html: página principal.
+- css/estilos.css: diseño y estilos.
+- js/app.js: retos, respuestas, puntaje y progreso.
+
+CÓMO UTILIZAR:
+1. Extrae la carpeta del archivo ZIP.
+2. Abre index.html con Chrome, Edge o Firefox.
+3. No requiere instalación ni servidor.
+
+NOTA:
+La página funciona sin conexión para sus actividades y evaluación.
+La fuente tipográfica externa puede requerir conexión; si no hay internet,
+el navegador utilizará fuentes alternativas.
+
+PERSONALIZACIÓN:
+Puedes cambiar el título, el nombre de la institución o las instrucciones
+editando index.html con Sublime Text o cualquier editor.

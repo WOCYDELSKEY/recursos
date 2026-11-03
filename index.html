@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Misión SI: actividad interactiva de programación para grado noveno.">
+  <title>Misión SI | Programación 9.º</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#inicio"><span class="brand-icon">⌘</span><span>MISIÓN <b>SI</b><small>PROGRAMACIÓN · GRADO 9.º</small></span></a>
+    <div class="top-actions"><span class="online"><i></i> MODO DE APRENDIZAJE</span><button class="ghost-btn" id="resetBtn" type="button">↻ Reiniciar</button></div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <div class="eyebrow"><span>●</span> CENTRO DE ENTRENAMIENTO · NIVEL 01</div>
+        <h1>Aprende a<br><span>tomar decisiones.</span></h1>
+        <p class="hero-lead">Los programas también pueden decidir. Tu misión es dominar el condicional <code>SI</code> y convertirte en un programador capaz de dar instrucciones inteligentes.</p>
+        <div class="student-panel">
+          <label for="studentName">IDENTIFÍCATE PARA INICIAR</label>
+          <div class="student-fields"><input id="studentName" type="text" maxlength="50" placeholder="Escribe tu nombre"><input id="studentCourse" type="text" maxlength="12" placeholder="Curso (ej. 901)"><button id="startBtn" type="button">Comenzar misión <span>→</span></button></div>
+          <small>Tu nombre aparecerá en el resumen final de la actividad.</small>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="Ilustración de un robot programador">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="float-tag tag-one">SI (condición)</div><div class="float-tag tag-two">ENTONCES</div>
+        <div class="robot"><div class="antenna"></div><div class="robot-head"><div class="ear left"></div><div class="ear right"></div><div class="eyes"><i></i><i></i></div><div class="mouth"></div></div><div class="robot-body"><div class="chest">SI<span>✓</span></div><div class="arm left-arm"></div><div class="arm right-arm"></div></div></div>
+        <div class="art-caption">PIENSA <b>·</b> PROGRAMA <b>·</b> COMPRUEBA</div>
+      </div>
+    </section>
+
+    <section class="dashboard" aria-label="Progreso de la misión">
+      <div class="dash-card"><span class="dash-icon">✦</span><div><small>EXPERIENCIA</small><strong id="score">0 XP</strong></div></div>
+      <div class="dash-card progress-card"><div class="progress-top"><small>PROGRESO DE LA MISIÓN</small><strong id="progressText">0%</strong></div><div class="progress-track"><div id="progressBar"></div></div></div>
+      <div class="dash-card"><span class="dash-icon">◈</span><div><small>RETOS SUPERADOS</small><strong id="completed">0 / 10</strong></div></div>
+    </section>
+
+    <nav class="mission-nav" aria-label="Etapas de la misión">
+      <a class="active" href="#aprender"><span>01</span> Aprende</a><a href="#detective"><span>02</span> Detectives</a><a href="#laboratorio"><span>03</span> Laboratorio</a><a href="#programador"><span>04</span> Programador</a><a href="#final"><span>05</span> Desafío final</a>
+    </nav>
+
+    <section class="section" id="aprender">
+      <div class="section-heading"><div><div class="eyebrow">ETAPA 01 · CONOCE LA HERRAMIENTA</div><h2>¿Qué es el condicional <span>SI</span>?</h2></div><span class="level">FUNDAMENTOS</span></div>
+      <p class="section-intro">En programación, una condición permite que el algoritmo ejecute una instrucción solamente cuando se cumple algo.</p>
+      <div class="learn-grid">
+        <article class="concept-card"><div class="concept-symbol">?</div><h3>1. Condición</h3><p>Es una pregunta que puede tener dos respuestas: <b>verdadero</b> o <b>falso</b>.</p></article>
+        <article class="concept-card"><div class="concept-symbol">→</div><h3>2. Entonces</h3><p>Indica qué instrucción debe ejecutar el algoritmo si la condición es verdadera.</p></article>
+        <article class="concept-card"><div class="concept-symbol">✓</div><h3>3. FinSi</h3><p>Marca el final de las instrucciones que dependen de esa condición.</p></article>
+      </div>
+      <div class="code-example">
+        <div class="code-head"><span><i></i><i></i><i></i> EJEMPLO EN PSEINT</span><span>01 / CONDICIONAL SIMPLE</span></div>
+        <pre><span class="kw">Algoritmo</span> VerificarEdad
+    <span class="kw">Definir</span> edad <span class="kw">Como</span> Entero
+    <span class="kw">Escribir</span> "Ingrese su edad:"
+    <span class="kw">Leer</span> edad
+
+    <span class="kw">Si</span> edad &gt;= 18 <span class="kw">Entonces</span>
+        <span class="out">Escribir</span> "Puedes votar"
+    <span class="kw">FinSi</span>
+<span class="kw">FinAlgoritmo</span></pre>
+        <div class="code-note"><span>ⓘ</span> Si la edad es 18 o más, se muestra el mensaje. Si la condición es falsa, el algoritmo simplemente continúa; no muestra otro mensaje.</div>
+      </div>
+      <div class="operators"><b>Operadores que puedes utilizar:</b><span>&gt; mayor que</span><span>&lt; menor que</span><span>&gt;= mayor o igual</span><span>&lt;= menor o igual</span><span>= igual</span><span>&lt;&gt; diferente</span></div>
+    </section>
+
+    <section class="section tinted" id="detective">
+      <div class="section-heading"><div><div class="eyebrow">ETAPA 02 · OBSERVA Y DECIDE</div><h2>Detectives de <span>condiciones</span></h2></div><span class="level">3 RETOS</span></div>
+      <p class="section-intro">Lee cada situación, selecciona la respuesta y comprueba si tu razonamiento es correcto.</p>
+      <div class="challenge-list">
+        <article class="challenge" data-challenge="1">
+          <div class="challenge-top"><span class="challenge-number">RETO 01</span><span class="xp">+10 XP</span></div><h3>La nota del estudiante</h3><p>Un estudiante obtiene 4.2. ¿Qué condición permite comprobar si aprobó, teniendo en cuenta que se aprueba con 3.0 o más?</p>
+          <div class="options"><button data-answer="a">Si nota = 3.0 Entonces</button><button data-answer="b">Si nota &gt;= 3.0 Entonces</button><button data-answer="c">Si nota &lt; 3.0 Entonces</button></div><div class="feedback" aria-live="polite"></div>
+        </article>
+        <article class="challenge" data-challenge="2">
+          <div class="challenge-top"><span class="challenge-number">RETO 02</span><span class="xp">+10 XP</span></div><h3>¿Se cumple o no?</h3><p>Observa: <code>numero &gt; 10</code>. Si numero vale 7, ¿cuál es el resultado de la condición?</p>
+          <div class="options"><button data-answer="a">Verdadero</button><button data-answer="b">Falso</button></div><div class="feedback" aria-live="polite"></div>
+        </article>
+        <article class="challenge" data-challenge="3">
+          <div class="challenge-top"><span class="challenge-number">RETO 03</span><span class="xp">+10 XP</span></div><h3>La instrucción invisible</h3><p>Si la condición de un <code>Si</code> es falsa y el algoritmo no tiene <code>SiNo</code>, ¿qué ocurre con la instrucción que está dentro del condicional?</p>
+          <div class="options"><button data-answer="a">Se ejecuta de todas maneras</button><button data-answer="b">No se ejecuta</button><button data-answer="c">Se repite varias veces</button></div><div class="feedback" aria-live="polite"></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="laboratorio">
+      <div class="section-heading"><div><div class="eyebrow">ETAPA 03 · ANALIZA EL CÓDIGO</div><h2>Laboratorio de <span>código</span></h2></div><span class="level">2 RETOS</span></div>
+      <p class="section-intro">Lee cuidadosamente el pseudocódigo. Imagina que el computador lo ejecuta paso a paso.</p>
+      <div class="lab-grid">
+        <article class="lab-card challenge" data-challenge="4">
+          <div class="challenge-top"><span class="challenge-number">RETO 04</span><span class="xp">+10 XP</span></div><h3>¿Qué mostrará?</h3><pre class="mini-code">edad &lt;- 16
+Si edad &gt;= 18 Entonces
+    Escribir "Mayor de edad"
+FinSi</pre><p>¿Qué sucede al ejecutar este algoritmo?</p><div class="options"><button data-answer="a">Muestra "Mayor de edad"</button><button data-answer="b">No muestra ningún mensaje</button><button data-answer="c">Muestra "Menor de edad"</button></div><div class="feedback" aria-live="polite"></div>
+        </article>
+        <article class="lab-card challenge" data-challenge="5">
+          <div class="challenge-top"><span class="challenge-number">RETO 05</span><span class="xp">+10 XP</span></div><h3>El número par</h3><pre class="mini-code">numero &lt;- 8
+Si numero MOD 2 = 0 Entonces
+    Escribir "Es par"
+FinSi</pre><p>¿Qué mensaje aparecerá en pantalla?</p><div class="options"><button data-answer="a">Es par</button><button data-answer="b">No aparece ningún mensaje</button><button data-answer="c">Es impar</button></div><div class="feedback" aria-live="polite"></div>
+        </article>
+      </div>
+      <div class="tip-box"><span>💡</span><p><b>Recuerda:</b> el operador <code>MOD</code> obtiene el residuo de una división. Si un número dividido entre 2 deja residuo 0, es par.</p></div>
+    </section>
+
+    <section class="section tinted" id="programador">
+      <div class="section-heading"><div><div class="eyebrow">ETAPA 04 · RESUELVE SITUACIONES</div><h2>Programador en <span>acción</span></h2></div><span class="level">3 RETOS</span></div>
+      <p class="section-intro">Ahora piensa como programador. Elige la condición que resolvería cada situación.</p>
+      <div class="challenge-list">
+        <article class="challenge" data-challenge="6"><div class="challenge-top"><span class="challenge-number">RETO 06</span><span class="xp">+10 XP</span></div><h3>Acceso a una atracción</h3><p>Una atracción permite ingresar a personas que miden 120 cm o más. ¿Cuál es la condición correcta?</p><div class="options"><button data-answer="a">Si altura &gt; 120 Entonces</button><button data-answer="b">Si altura &gt;= 120 Entonces</button><button data-answer="c">Si altura = 120 Entonces</button></div><div class="feedback" aria-live="polite"></div></article>
+        <article class="challenge" data-challenge="7"><div class="challenge-top"><span class="challenge-number">RETO 07</span><span class="xp">+10 XP</span></div><h3>Temperatura alta</h3><p>Un sistema debe mostrar "Temperatura alta" cuando la temperatura sea superior a 30 grados. ¿Qué condición debe usar?</p><div class="options"><button data-answer="a">Si temperatura &gt; 30 Entonces</button><button data-answer="b">Si temperatura &lt; 30 Entonces</button><button data-answer="c">Si temperatura = 0 Entonces</button></div><div class="feedback" aria-live="polite"></div></article>
+        <article class="challenge" data-challenge="8"><div class="challenge-top"><span class="challenge-number">RETO 08</span><span class="xp">+10 XP</span></div><h3>Control de acceso</h3><p>Un programa debe mostrar "Bienvenido" únicamente si la clave ingresada es igual a 1234. ¿Cuál es la condición?</p><div class="options"><button data-answer="a">Si clave &lt;&gt; 1234 Entonces</button><button data-answer="b">Si clave &gt; 1234 Entonces</button><button data-answer="c">Si clave = 1234 Entonces</button></div><div class="feedback" aria-live="polite"></div></article>
+      </div>
+    </section>
+
+    <section class="section final-section" id="final">
+      <div class="final-banner"><div><div class="eyebrow">ETAPA 05 · PRUEBA DE CONOCIMIENTO</div><h2>El desafío <span>final</span></h2><p>Responde estas dos preguntas para completar tu misión.</p></div><div class="trophy">🏆</div></div>
+      <div class="final-grid">
+        <article class="challenge final-question" data-challenge="9"><div class="challenge-top"><span class="challenge-number">PREGUNTA 09</span><span class="xp">+10 XP</span></div><h3>Ordena tus ideas</h3><p>¿Cuál es el orden correcto de la estructura de un condicional simple en PSeInt?</p><div class="options"><button data-answer="a">Si – FinSi – Entonces</button><button data-answer="b">Si – Entonces – instrucciones – FinSi</button><button data-answer="c">Entonces – Si – FinAlgoritmo</button></div><div class="feedback" aria-live="polite"></div></article>
+        <article class="challenge final-question" data-challenge="10"><div class="challenge-top"><span class="challenge-number">PREGUNTA 10</span><span class="xp">+10 XP</span></div><h3>Piensa como programador</h3><p>¿Qué resultado tiene la condición <code>puntaje &lt;= 100</code> si puntaje vale 100?</p><div class="options"><button data-answer="a">Verdadero</button><button data-answer="b">Falso</button><button data-answer="c">No se puede saber</button></div><div class="feedback" aria-live="polite"></div></article>
+      </div>
+      <div class="result-panel" id="resultPanel">
+        <div class="result-icon">✦</div>
+        <div class="result-main">
+          <small>REPORTE PERSONAL · MISIÓN SI</small>
+          <h3 id="resultTitle">¡Sigue avanzando!</h3>
+          <p id="resultDescription">Completa los 10 retos para generar tu resultado.</p>
+          <div class="student-result" id="studentResult">ESTUDIANTE: <b id="resultStudent">Pendiente</b><span>CURSO: <b id="resultCourse">—</b></span></div>
+          <div class="result-stats"><span>RETOS CORRECTOS <b id="correctCount">0 / 10</b></span><span>PUNTAJE <b id="resultPoints">0 XP</b></span></div>
+          <p class="screenshot-hint" id="screenshotHint">Cuando termines los 10 retos, toma una captura de pantalla de este reporte y envíala a tu docente por WhatsApp.</p>
+        </div>
+        <div class="result-score" id="finalScore">0/100</div>
+      </div>
+    </section>
+
+    <section class="section delivery">
+      <div class="section-heading"><div><div class="eyebrow">TRABAJO AUTÓNOMO · PSEINT</div><h2>Tu turno de <span>programar</span></h2></div><span class="level">EVIDENCIA</span></div>
+      <p class="section-intro">La misión interactiva te ayuda a comprender. Ahora demuestra lo aprendido creando estos algoritmos en PSeInt.</p>
+      <div class="homework-grid">
+        <article><span>01</span><h3>Número positivo</h3><p>Solicita un número. Si es mayor que cero, muestra "El número es positivo".</p></article>
+        <article><span>02</span><h3>Mayor de edad</h3><p>Solicita la edad. Si es mayor o igual a 18, muestra "Es mayor de edad".</p></article>
+        <article><span>03</span><h3>Estudiante aprobado</h3><p>Solicita una nota. Si es mayor o igual a 3.0, muestra "Aprobaste".</p></article>
+        <article><span>04</span><h3>Número par</h3><p>Solicita un número. Si el residuo de dividirlo entre 2 es cero, muestra "Es par".</p></article>
+      </div>
+      <div class="delivery-note"><b>¿Qué debes entregar?</b><ol><li>Los cuatro algoritmos elaborados y ejecutados en PSeInt.</li><li>Una captura de pantalla de cada algoritmo funcionando.</li><li>Una captura del resultado final de esta misión web.</li></ol><p>Envía las evidencias al medio indicado por tu docente. Recuerda escribir tu nombre y curso.</p></div>
+    </section>
+
+    <footer><div class="brand"><span class="brand-icon">⌘</span><span>MISIÓN <b>SI</b><small>PROGRAMACIÓN · GRADO 9.º</small></span></div><p>Aprender a programar es aprender a resolver problemas.</p><span>ACTIVIDAD PEDAGÓGICA · 2026</span></footer>
+  </main>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="js/app.js"></script>
+</body>
+</html>
